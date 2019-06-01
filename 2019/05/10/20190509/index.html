@@ -103,13 +103,23 @@
 
 
 
-  <meta property="og:type" content="website">
-<meta property="og:title" content="Tractor">
-<meta property="og:url" content="http://blog.tractor.ren/index.html">
+  <meta name="description" content="HEXO托管七牛云使用hexo-qiniu-sync插件，该插件在GitHub上开源">
+<meta property="og:type" content="article">
+<meta property="og:title" content="HEXO托管七牛云">
+<meta property="og:url" content="http://blog.tractor.ren/2019/05/10/20190509/index.html">
 <meta property="og:site_name" content="Tractor">
+<meta property="og:description" content="HEXO托管七牛云使用hexo-qiniu-sync插件，该插件在GitHub上开源">
 <meta property="og:locale" content="zh-CN">
+<meta property="og:image" content="http://oss.tractor.ren/20190509-01.png">
+<meta property="og:image" content="http://oss.tractor.ren/20190509-02.png">
+<meta property="og:image" content="http://oss.tractor.ren/20190509-03.png">
+<meta property="og:image" content="http://oss.tractor.ren/20190509-04.png">
+<meta property="og:image" content="http://oss.tractor.ren/20190509-05.png">
+<meta property="og:updated_time" content="2019-05-11T01:54:42.934Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Tractor">
+<meta name="twitter:title" content="HEXO托管七牛云">
+<meta name="twitter:description" content="HEXO托管七牛云使用hexo-qiniu-sync插件，该插件在GitHub上开源">
+<meta name="twitter:image" content="http://oss.tractor.ren/20190509-01.png">
 
 
 
@@ -117,7 +127,7 @@
 
   
   
-  <link rel="canonical" href="http://blog.tractor.ren/">
+  <link rel="canonical" href="http://blog.tractor.ren/2019/05/10/20190509/">
 
 
 
@@ -127,7 +137,7 @@
   };
 </script>
 
-  <title>Tractor</title>
+  <title>HEXO托管七牛云 | Tractor</title>
   
 
 
@@ -175,8 +185,7 @@
     
   
 
-  <div class="container sidebar-position-left 
-  page-home">
+  <div class="container sidebar-position-left page-post-detail">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -214,7 +223,7 @@
         
         
           
-          <li class="menu-item menu-item-home menu-item-active">
+          <li class="menu-item menu-item-home">
 
     
     
@@ -293,9 +302,9 @@
           
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
@@ -327,10 +336,8 @@
 
         
         
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/10/20190509/" class="post-title-link" itemprop="url">HEXO托管七牛云</a>
+          <h1 class="post-title" itemprop="name headline">HEXO托管七牛云
+
               
             
           </h1>
@@ -412,6 +419,13 @@
           
 
           
+            <span class="post-meta-divider">|</span>
+            <span class="post-meta-item-icon">
+            <i class="fa fa-eye"></i>
+             阅读次数： 
+            <span class="busuanzi-value" id="busuanzi_value_page_pv"></span>
+            </span>
+          
 
           
 
@@ -430,18 +444,15 @@
       
 
       
-        
-          <h1 id="HEXO托管七牛云"><a href="#HEXO托管七牛云" class="headerlink" title="HEXO托管七牛云"></a>HEXO托管七牛云</h1><p>使用hexo-qiniu-sync插件，该插件在<a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="noopener">GitHub</a>上开源</p>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/10/20190509/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
+        <h1 id="HEXO托管七牛云"><a href="#HEXO托管七牛云" class="headerlink" title="HEXO托管七牛云"></a>HEXO托管七牛云</h1><p>使用hexo-qiniu-sync插件，该插件在<a href="https://github.com/gyk001/hexo-qiniu-sync" target="_blank" rel="noopener">GitHub</a>上开源</p>
+<a id="more"></a>
+<h3 id="1、七牛云"><a href="#1、七牛云" class="headerlink" title="1、七牛云"></a>1、七牛云</h3><p>注册七牛云     <a href="https://portal.qiniu.com/signup?code=3lito9f61ufde" target="_blank" rel="noopener">入口</a></p>
+<p>新建存储空间<br><img src="http://oss.tractor.ren/20190509-01.png" alt="在是"><br>绑定域名<br><img src="http://oss.tractor.ren/20190509-02.png" alt="在这里插入图片描述"><br>开启默认首页<br><img src="http://oss.tractor.ren/20190509-03.png" alt="在这里插入图片描述"><br>获取AccessKey<br><img src="http://oss.tractor.ren/20190509-04.png" alt="在这里插入图片描述"><br><img src="http://oss.tractor.ren/20190509-05.png" alt="在这里插入图片描述"></p>
+<h3 id="2、在hexo目录下安装"><a href="#2、在hexo目录下安装" class="headerlink" title="2、在hexo目录下安装"></a>2、在hexo目录下安装</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">npm install hexo-qiniu-sync --save</span><br></pre></td></tr></table></figure>
+<h3 id="3、在-config-yml-文件中添加一下内容"><a href="#3、在-config-yml-文件中添加一下内容" class="headerlink" title="3、在   __config.yml_ 文件中添加一下内容"></a>3、在   __config.yml_ 文件中添加一下内容</h3><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br><span class="line">11</span><br><span class="line">12</span><br><span class="line">13</span><br><span class="line">14</span><br><span class="line">15</span><br><span class="line">16</span><br><span class="line">17</span><br><span class="line">18</span><br><span class="line">19</span><br><span class="line">20</span><br><span class="line">21</span><br><span class="line">22</span><br><span class="line">23</span><br><span class="line">24</span><br><span class="line">25</span><br><span class="line">26</span><br><span class="line">27</span><br><span class="line">28</span><br><span class="line">29</span><br><span class="line">30</span><br><span class="line">31</span><br><span class="line">32</span><br><span class="line">33</span><br><span class="line">34</span><br><span class="line">35</span><br><span class="line">36</span><br><span class="line">37</span><br></pre></td><td class="code"><pre><span class="line">###bucket        空间名称.</span><br><span class="line">###access_key    上传密钥AccessKey</span><br><span class="line">###secret_key    上传密钥SecretKey</span><br><span class="line">###secret_file   秘钥文件路径，可以将上述两个属性配置到文件内，防止泄露，json格式。绝对路径相对路径均</span><br><span class="line">可</span><br><span class="line">###dirPrefix     上传的资源子目录前缀.如设置，需与urlPrefix同步 </span><br><span class="line">###urlPrefix     外链前缀.</span><br><span class="line">###up_host      上传服务器路径,如选择华北区域的话配置为http://up-z1.qiniu.com</span><br><span class="line">###local_dir     本地目录.</span><br><span class="line">###update_exist  是否更新已经上传过的文件(仅文件大小不同或在上次上传后进行更新的才会重新上传)</span><br><span class="line">###image/js/css  子参数folder为不同静态资源种类的目录名称，一般不需要改动</span><br><span class="line">###image.extend  这是个特殊参数，用于生成缩略图或加水印等操作。具体请参考http://developer.qiniu.com/docs/v6/api/reference/fop/image/ </span><br><span class="line">###可使用基本图片处理、高级图片处理、图片水印处理这3个接口。例如 ?imageView2/2/w/500 即</span><br><span class="line">生成宽度最多<span class="number">500</span>px的缩略图</span><br><span class="line">#</span><br><span class="line"></span><br><span class="line"></span><br><span class="line"></span><br><span class="line">qiniu:</span><br><span class="line">  offline: <span class="literal">false</span></span><br><span class="line">  sync: <span class="literal">true</span></span><br><span class="line">  bucket: blog-tractor</span><br><span class="line"> # secret_file: sec/qn.json or C:           #此处注释掉，否则会报错</span><br><span class="line">  access_key: AccessKey						#填写你自己的AccessKey</span><br><span class="line">  secret_key: SecretKey						#填写你自己的SecretKey	</span><br><span class="line">  dirPrefix:					   			#这里我选择不填，如果想填写请参考官方文档</span><br><span class="line">  urlPrefix: http:<span class="comment">//blog.tractor.ren  		#此处是你绑定OSS的域名 </span></span><br><span class="line">  up_host: http:<span class="comment">//upload.qiniu.com			#上传服务器路径，默认不动即可</span></span><br><span class="line">  local_dir: public							#你要同步的本地目录</span><br><span class="line">  update_exist: <span class="literal">true</span></span><br><span class="line">  image:</span><br><span class="line">    folder: images</span><br><span class="line">    extend:</span><br><span class="line">  js:</span><br><span class="line">    folder: js</span><br><span class="line">  css:</span><br><span class="line">    folder: css</span><br></pre></td></tr></table></figure>
+<h3 id="该配置内容实现的是将public下生成的所有静态文件都同步到OSS的根目录下，如想实现其他目的，请参考官方文档"><a href="#该配置内容实现的是将public下生成的所有静态文件都同步到OSS的根目录下，如想实现其他目的，请参考官方文档" class="headerlink" title="该配置内容实现的是将public下生成的所有静态文件都同步到OSS的根目录下，如想实现其他目的，请参考官方文档"></a>该配置内容实现的是将public下生成的所有静态文件都同步到OSS的根目录下，如想实现其他目的，请参考官方文档</h3><h3 id="同步"><a href="#同步" class="headerlink" title="同步"></a>同步</h3><p>两种方法：<br>启动本地服务器<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo server</span><br></pre></td></tr></table></figure></p>
+<p>使用插件命令<br><figure class="highlight javascript"><table><tr><td class="gutter"><pre><span class="line">1</span><br></pre></td><td class="code"><pre><span class="line">hexo qiniu sync</span><br></pre></td></tr></table></figure></p>
+<h3 id="这些都做完就可以访问刚才绑定七牛的域名访问托管在七牛的静态网站-（如网站稍微大点同步可能会慢点，或网络有延迟）"><a href="#这些都做完就可以访问刚才绑定七牛的域名访问托管在七牛的静态网站-（如网站稍微大点同步可能会慢点，或网络有延迟）" class="headerlink" title="这些都做完就可以访问刚才绑定七牛的域名访问托管在七牛的静态网站 （如网站稍微大点同步可能会慢点，或网络有延迟）"></a>这些都做完就可以访问刚才绑定七牛的域名访问托管在七牛的静态网站 <em>（如网站稍微大点同步可能会慢点，或网络有延迟）</em></h3>
       
     </div>
 
@@ -464,351 +475,28 @@
       
 
       
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.tractor.ren/2019/05/06/WordPress转Hexo/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tractor Liu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tractor">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/06/WordPress转Hexo/" class="post-title-link" itemprop="url">从WordPress到Hexo</a>
-              
-            
-          </h1>
-        
-
-        <div class="post-meta">
-          <span class="post-time">
-
-            
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-06 17:45:34" itemprop="dateCreated datePublished" datetime="2019-05-06T17:45:34+08:00">2019-05-06</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/06/WordPress转Hexo/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/06/WordPress转Hexo/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-            <span id="/2019/05/06/WordPress转Hexo/" class="leancloud_visitors" data-flag-title="从WordPress到Hexo">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
-        </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
       
       
 
       
-        
-          <h1 id="WordPress转Hexo观后感"><a href="#WordPress转Hexo观后感" class="headerlink" title="WordPress转Hexo观后感=_="></a>WordPress转Hexo观后感=_=</h1><p><img src="https://img-blog.csdnimg.cn/20190506171807959.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80Mzg0MjYzNg==" alt><br>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/06/WordPress转Hexo/#more" rel="contents">
-                阅读全文 &raquo;
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2019/05/06/WordPress转Hexo/" rel="next" title="从WordPress到Hexo">
+                <i class="fa fa-chevron-left"></i> 从WordPress到Hexo
               </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </p></div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
-      
-    </footer>
-  </div>
-  
-  
-  
-  </article>
-
-
-    
-      
-
-  
-
-  
-  
-  
-
-  
-
-  <article class="post post-type-normal" itemscope itemtype="http://schema.org/Article">
-  
-  
-  
-  <div class="post-block">
-    <link itemprop="mainEntityOfPage" href="http://blog.tractor.ren/2019/05/05/hello-world/">
-
-    <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
-      <meta itemprop="name" content="Tractor Liu">
-      <meta itemprop="description" content>
-      <meta itemprop="image" content="/images/avatar.gif">
-    </span>
-
-    <span hidden itemprop="publisher" itemscope itemtype="http://schema.org/Organization">
-      <meta itemprop="name" content="Tractor">
-    </span>
-
-    
-      <header class="post-header">
-
-        
-        
-          <h1 class="post-title" itemprop="name headline">
-                
-                
-                <a href="/2019/05/05/hello-world/" class="post-title-link" itemprop="url">Hello World</a>
-              
             
-          </h1>
-        
+          </div>
 
-        <div class="post-meta">
-          <span class="post-time">
+          <span class="post-nav-divider"></span>
 
+          <div class="post-nav-prev post-nav-item">
             
-            
-            
-
-            
-              <span class="post-meta-item-icon">
-                <i class="fa fa-calendar-o"></i>
-              </span>
-              
-                <span class="post-meta-item-text">发表于</span>
-              
-
-              
-                
-              
-
-              <time title="创建时间：2019-05-05 22:22:25" itemprop="dateCreated datePublished" datetime="2019-05-05T22:22:25+08:00">2019-05-05</time>
-            
-
-            
-          </span>
-
-          
-
-          
-            
-            
-              
-              <span class="post-comments-count">
-                <span class="post-meta-divider">|</span>
-                <span class="post-meta-item-icon">
-                  <i class="fa fa-comment-o"></i>
-                </span>
-            
-                <span class="post-meta-item-text">评论数：</span>
-                <a href="/2019/05/05/hello-world/#comments" itemprop="discussionUrl">
-                  <span class="post-comments-count valine-comment-count" data-xid="/2019/05/05/hello-world/" itemprop="commentCount"></span>
-                </a>
-              </span>
-            
-          
-
-          
-          
-            <span id="/2019/05/05/hello-world/" class="leancloud_visitors" data-flag-title="Hello World">
-              <span class="post-meta-divider">|</span>
-              <span class="post-meta-item-icon">
-                <i class="fa fa-eye"></i>
-              </span>
-              
-                <span class="post-meta-item-text">阅读次数：</span>
-              
-                <span class="leancloud-visitors-count"></span>
-            </span>
-          
-
-          
-
-          
-
-          
-
+          </div>
         </div>
-      </header>
-    
-
-    
-    
-    
-    <div class="post-body" itemprop="articleBody">
-
-      
       
 
       
-        
-          <p>Welcome to <a href="https://hexo.io/" target="_blank" rel="noopener">Hexo</a>! This is your very first post. Check <a href="https://hexo.io/docs/" target="_blank" rel="noopener">documentation</a> for more info. If you get any problems when using Hexo, you can find the answer in <a href="https://hexo.io/docs/troubleshooting.html" target="_blank" rel="noopener">troubleshooting</a> or you can ask me on <a href="https://github.com/hexojs/hexo/issues" target="_blank" rel="noopener">GitHub</a>.</p>
-<h2 id="Quick-Start"><a href="#Quick-Start" class="headerlink" title="Quick Start"></a>Quick Start</h2>
-          <!--noindex-->
-          
-            <div class="post-button text-center">
-              <a class="btn" href="/2019/05/05/hello-world/#more" rel="contents">
-                阅读全文 &raquo;
-              </a>
-            </div>
-          
-          <!--/noindex-->
-        
-      
-    </div>
-
-    
-
-    
-    
-    
-
-    
-
-    
-      
-    
-    
-
-    
-
-    <footer class="post-footer">
-      
-
-      
-
-      
-
-      
-      
-        <div class="post-eof"></div>
       
     </footer>
   </div>
@@ -818,14 +506,19 @@
   </article>
 
 
-    
-  </section>
-
-  
+  </div>
 
 
           </div>
           
+
+  
+    <div class="comments" id="comments">
+    </div>
+
+  
+
+
 
         </div>
         
@@ -845,8 +538,17 @@
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap">
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview-wrap">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <div class="site-overview-wrap sidebar-panel sidebar-panel-active">
+      <div class="site-overview-wrap sidebar-panel">
         <div class="site-overview">
           <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
             
@@ -917,6 +619,23 @@ show_date_time();
         </div>
       </div>
 
+      
+      <!--noindex-->
+        <div class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+            
+            
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-1"><a class="nav-link" href="#HEXO托管七牛云"><span class="nav-number">1.</span> <span class="nav-text">HEXO托管七牛云</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#1、七牛云"><span class="nav-number">1.0.1.</span> <span class="nav-text">1、七牛云</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2、在hexo目录下安装"><span class="nav-number">1.0.2.</span> <span class="nav-text">2、在hexo目录下安装</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#3、在-config-yml-文件中添加一下内容"><span class="nav-number">1.0.3.</span> <span class="nav-text">3、在   __config.yml_ 文件中添加一下内容</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#该配置内容实现的是将public下生成的所有静态文件都同步到OSS的根目录下，如想实现其他目的，请参考官方文档"><span class="nav-number">1.0.4.</span> <span class="nav-text">该配置内容实现的是将public下生成的所有静态文件都同步到OSS的根目录下，如想实现其他目的，请参考官方文档</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#同步"><span class="nav-number">1.0.5.</span> <span class="nav-text">同步</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#这些都做完就可以访问刚才绑定七牛的域名访问托管在七牛的静态网站-（如网站稍微大点同步可能会慢点，或网络有延迟）"><span class="nav-number">1.0.6.</span> <span class="nav-text">这些都做完就可以访问刚才绑定七牛的域名访问托管在七牛的静态网站 （如网站稍微大点同步可能会慢点，或网络有延迟）</span></a></li></ol></li></ol></div>
+            
+
+          </div>
+        </div>
+      <!--/noindex-->
       
 
       
@@ -1096,6 +815,10 @@ show_date_time();
 
 
   
+  <script src="/js/scrollspy.js?v=7.1.1"></script>
+<script src="/js/post-details.js?v=7.1.1"></script>
+
+
 
   
 
@@ -1142,6 +865,8 @@ show_date_time();
 
 
 
+  
+
 
   
 
@@ -1152,38 +877,32 @@ show_date_time();
   
   <script>
     
-    function showTime(Counter) {
-      var entries = [];
+    function addCount(Counter) {
       var $visitors = $('.leancloud_visitors');
+      var url = $visitors.attr('id').trim();
+      var title = $visitors.attr('data-flag-title').trim();
 
-      $visitors.each(function() {
-        entries.push( $(this).attr('id').trim() );
-      });
-
-      Counter('get', '/classes/Counter', { where: JSON.stringify({ url: { '$in': entries } }) })
+      Counter('get', '/classes/Counter', { where: JSON.stringify({ url }) })
         .done(function({ results }) {
-          var COUNT_CONTAINER_REF = '.leancloud-visitors-count';
-
-          if (results.length === 0) {
-            $visitors.find(COUNT_CONTAINER_REF).text(0);
-            return;
-          }
-
-          for (var i = 0; i < results.length; i++) {
-            var item = results[i];
-            var url = item.url;
-            var time = item.time;
-            var element = document.getElementById(url);
-
-            $(element).find(COUNT_CONTAINER_REF).text(time);
-          }
-          for (var i = 0; i < entries.length; i++) {
-            var url = entries[i];
-            var element = document.getElementById(url);
-            var countSpan = $(element).find(COUNT_CONTAINER_REF);
-            if (countSpan.text() == '') {
-              countSpan.text(0);
-            }
+          if (results.length > 0) {
+            var counter = results[0];
+            
+            Counter('put', '/classes/Counter/' + counter.objectId, JSON.stringify({ time: { '__op': 'Increment', 'amount': 1 } }))
+            
+              .done(function() {
+                var $element = $(document.getElementById(url));
+                $element.find('.leancloud-visitors-count').text(counter.time + 1);
+              })
+            
+              .fail(function ({ responseJSON }) {
+                console.log('Failed to save Visitor num, with error message: ' + responseJSON.error);
+              })
+          } else {
+            
+              var $element = $(document.getElementById(url));
+              $element.find('.leancloud-visitors-count').text('Counter not initialized! More info at console err msg.');
+              console.error('ATTENTION! LeanCloud counter has security bug, see how to solve it here: https://github.com/theme-next/hexo-leancloud-counter-security. \n However, you can still use LeanCloud without security, by setting `security` option to `false`.');
+            
           }
         })
         .fail(function ({ responseJSON }) {
@@ -1208,9 +927,7 @@ show_date_time();
             });
           };
           
-            if ($('.post-title-link').length >= 1) {
-              showTime(Counter);
-            }
+            addCount(Counter);
           
         });
     });
